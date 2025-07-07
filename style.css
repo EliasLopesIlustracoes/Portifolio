@@ -1,0 +1,270 @@
+
+
+/*BLOCO ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*BORDA GERAL PADRÃO*/
+}
+    /*INICIO FONTES DO GOOGLE*/
+/* ==============FALTA COPIAR O CODIGO FONTES GOOOGLE CSS============== */
+  /*FIM FONTES GOOGLE*/
+
+h2.titulo{ /*TODOS OS TITULOS terao mesmo estilo GERAL ex.: ESPECIALIDADES */
+
+    color: #fff; /*COR BRANCA*/
+    font-size: 38px; /*TAMANHO*/
+    text-align: center; /*Alinhamento no CENTRO*/
+}
+
+h2.titulo span{
+
+    color: #00ff08; /*cor VERDE*/
+}
+
+button:hover{
+
+    box-shadow: 0px 0px 8px #00ff0868; /*sombreado no BOTAO*/
+    transform: scale(1.05);
+}
+
+
+/* "*" significca para todos os elemento do meu site faça isto dentor dos colchetes*/
+
+body{
+
+    background-color:#000;/*FUNDO PRETO #000*/
+    height: 100vh; /*ALTURA PADRAO DE 100 VIDEO PORT- assim ele toma to espaçamento da tela*/
+
+}
+    /*CHAMANDO AS CLASSES descritas no HTML*/
+    .interface{
+        max-width: 1280px; /*LARGURA MAXIMA EM PIXELS-criar uma margen esquerda da LOGO BR*/
+        margin: 0 auto; /*centraliza o conteudo links menu e logo BR na Tela*/
+}
+
+    .flex{
+
+        display: flex; /*cria uma margem Automatica do TEXTO e IMAGEM MAIN*/
+    }
+
+    /*EFEITOS BOTAO*/
+.btn-contato button{
+
+    padding: 10px 40px; /*10px no topo e embaixo e 40px comprimento*/
+    font-size: 18px; /*TAMANHO da FONTE*/
+    font-weight: 600; /*peso da Fonte "LETRA EM NEGRITO*/
+    background-color: #00ff08; /*COR DO BOTAO*/
+    border: 0; /*retira borda PADDRAO do botão*/
+    border-radius: 30px; /*ADICIONA uma NOVA BORDA personalizada*/
+    cursor: pointer; /*CURSOR VIRA UM DEDINHO DA MAOZINHA*/
+}
+
+
+
+/*ESTILO CABEÇALHO*/
+
+header{
+    padding: 40px 4%; /*MARGEM ESQUERDA LOGO-inicio-especialidades-sobre-projeto-btnContato */
+}
+
+header >.interface{
+
+    display: flex;
+    align-items: center; /*ALINHAR ITENS AO CENTRO*/
+    justify-content: space-between; /* centraliza os menus entre logo AGENCIA e btnCONTATO*/
+
+}
+
+
+header a{
+    
+    color: #7d7d7d; /*COR DA FONTE MENU LINKS BRANCO ESCURO*/
+    text-decoration: none; /*retirar a linha abaixo do texto nos links*/
+    display: inline-block;
+    transition: .2s; /*EFEITO DE ZOOOM com SUAVIDADE*/    
+}
+
+header a:hover{
+
+    color: #fff; /*MUDAR COR PARA BRANCO*/
+    transform: scale(1.05); /*ZOOM NA LETRA*/
+}
+
+
+    /*VERIFICAR DEPOIS   Quando o Usuario PASSAR o MOUSE por CIMA*/
+
+header .btn-contato:over{
+    color: #fff; /*link menu fica BRANCO*/
+    transform: scale(1.01); /*ZOOM menu links*/ 
+}
+
+
+/*abaixo vamos mexer na lista desordenata retirando os pingos do menu*/
+header nav ul{
+
+    list-style-type: none; /*retirar as bolinha que exitem ao lado dos itens*/
+    
+} 
+ /*abaixo colocar os itens do menu (inicio,especialidade, sobre) lado a lado*/
+header nav ul li{
+
+    display: inline-block; /*colocar intens do menu lado a lado */
+    padding: 0 40px; /*ESPAÇAMENTO ENTRE OS LINKS 0 em CIMA e EMBAIXO e Espaço de 40px*/
+
+}
+
+/*TIREI DAQUI O BOTAO*/
+
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-site{
+
+    padding: 40px 4%;
+
+}
+
+section.topo-site.flex{
+
+        align-items: center;
+        justify-content: center;
+        gap: 90px; /*ESPAÇAMENTO ENTRE TEXTO E IMAGEM*/
+        
+
+}
+
+.topo-site h1{
+    color: #fff; /*COR BRANCA DO TEXTO MAIN*/
+    font-size: 42px; /*TAMANHO DA LETRA TEXTO MAIN*/
+    line-height: 40px; /*espaçamento entre as letras cima e baixo do titulo principal h1*/
+}
+
+.topo-site .texto-topo-site h1 span{
+
+    color: #00ff08; /*COR DO PONTO FINAL*/
+    font-size: 84px; /*tamanho do PONTO*/
+}
+
+.topo-site .texto-topo-site p{
+    color: #fff;
+    margin: 40px 0; /*espacamento entre  o texto*/
+}
+
+/* 2) CHAME a ANIMAÇÃO da IMAGEM*/
+    .topo-site .img-topo-site img{
+
+        position: relative; /*A ANIMAÇÃO so FUNCIONA SE FOR DIFERENTE DO STATIC*/
+        animation: flutuante 2s ease-in-out infinite alternate; /*Começa SUAVE meio RAPIDO termina SUAVE*/
+    }
+
+/* 1-) PREPARE a ANIMAÇÃO para IMAGEM*/
+
+    @keyframes flutuante{
+                /*ESTADO INICIAL IMAGEM PARADA*/
+        0%{
+            top: 0;
+        }  /*no TOPO ZERO*/
+        100%{
+            top: 30px
+        } /*Quando chergar ao 100 o topo deve ser 30px*/
+
+    }
+
+/* =================MINHAS ESPECIALIDADES ===========*/
+
+        section.especialidades{
+            padding: 40px 4%; /*espaçamento nas laterais de 4%*/   
+        }
+
+        section.especialidades .flex{
+
+            gap: 60px; /*ESPAÇAMENTO ENTRE OS BOX*/
+
+        }
+
+                /*TRABALHANDO NAS CAIXAS/BOX EM GERAL*/
+            .especialidades .especialidades-box{
+                color: #fff; /*todos os BOX letra BRANCA*/
+                border-radius: 25px; /*ARRENDONDANDO AS BORDAS DO BOX*/
+                padding: 40px; /*espaçamento GERAL 40*/
+                /*border: 2px solid #fff; /*BOX QUADRADO CONTORNO BRANCO*/
+                margin-top: 45px; /*espaçamento entre o Titulo ESPECIALIDADES E O BOX*/
+                transition: 1.2s; /*SUAVIZAR A ANIMAÇAO SHADOW BOX*/
+
+            }
+            /*PASSANDO O MOUSE POR CIMA DO BOX*/
+
+            .especialidades .especialidades-box:hover{
+
+                transform: scale(1.02); /*ZOOM NO BOX ESPECIALIDADES*/
+                box-shadow: 0 0 20px #ffffff78; /*DESFOCAR O BRANCO DO BOX*/
+
+            }
+
+
+            /*TRABALNHANDO NOS ICONES*/
+
+            .especialidades .flex .especialidades-box i{
+
+                font-size: 78px; /*tamanho do icones*/
+                color: #00ff08; /*cor do icone*/
+            }
+            /*TITULOS H3 ABAIXO DO ICONE*/
+            .especialidades .flex .especialidades-box H3{
+
+                font-size: 28px; /*TAMANHO DA LETRA*/
+                margin: 15px 0; /*espaço entre o titulo e o texto abaixo 15 na lateral 0*/
+            }
+
+            /*============SOBRE */
+
+            section.sobre{
+                padding: 80px 4%; /*40pixel de espaço em cima e embaixo e 4% nas laterais*/
+
+            }
+                /*TRATANDO O TEXTO AO LADO DA FOTO*/
+            section.sobre .flex{
+
+                align-items: center; /*CENTRALIZAR O ASSUNTO NO MEIO DA FOTO*/
+                gap: 60px; /*ESPAÇO DO LADO ESQUERDO PROXIMO A FOTO*/
+
+
+
+            }
+
+            .sobre .txtSobre{
+                color: #fff; /*TEXTO do conteudo  eu sou em BRANCO*/
+            }
+
+            .sobre .txtSobre h2{
+
+                font-size: 40px; /*TAMANHO DO TITULO*/
+                line-height: 40px; /*diminui a distancia do texo de cima para o texto abaixo*/
+                margin-bottom: 30px; /*AFASTAR O TITULO DO PARAGRAFO*/
+            }
+
+            .sobre .txtSobre h2 span{
+
+                color: #00ff08; /*TEXTO EM COR VERDE*/
+                display: block; /*JOGA O TEXTO DO SPAN PARA A LINHA DE BAIXO*/
+            }
+
+            .sobre .txtSobre p{
+                margin: 20px 0; /*espaçamento texto em cima e embaixo latearal zero*/
+                text-align: justify; /*alinhar o texto como um JORNAL*/
+            }
+
+            .sobre .txtSobre .btnSocial button{
+                width: 60px; /*altura*/
+                height: 60px;/*lagura*/
+                border-radius: 50%; /*raio da borda*/
+                border: none; /*icone sem borda*/
+                background-color: #00ff08;
+                font-size: 22px; /*tamanho dos icones*/
+                cursor: pointer; /*MOUSE DE MAOZINHA*/
+                margin: 0 5px; /*margem zero e laterais 5 pixels*/
+                transition: .2s; /*suavizar o efeito botao*/
+
+            }
+
+
