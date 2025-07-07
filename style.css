@@ -264,7 +264,68 @@ section.topo-site.flex{
                 cursor: pointer; /*MOUSE DE MAOZINHA*/
                 margin: 0 5px; /*margem zero e laterais 5 pixels*/
                 transition: .2s; /*suavizar o efeito botao*/
+            }
+
+            /*ESTILO DO PORTIFOLIO abaixo da FOTO*/
+
+            section.portifolio{
+
+                padding: 80px 4%; /*espaçamento CIMA/BAIXO e 4% nas laterais*/
+                box-shadow: 0 0 40px 10px #ffffff1e; /*BOX com deslocamento HORIZONTAL/VERTICAL DESFOQUE ESPALHAMENTO cor BRANCA*/
+            }
+
+            section.portifolio .flex{
+                
+                /*gap: 80px; /*espaçamento entre os box manualmente*/
+                justify-content: space-around; /*Este funciona com medidas automaticas*/
+                margin-top: 60px; /*AFASTAR o TITULO do BOX projetos*/
+
 
             }
 
 
+            div .img-Port{
+
+                width: 360px; /*LARGURA*/
+                height: 460px; /*ALTURA*/
+                /*background-color: #00ff08; /*cor*/
+                background-size: cover; /*ADAPTA A IMAGEM AO ESPAÇO mas pode ter corte*/
+                background-position: 100% 0%; /*100% visualização e ZERO indica Inicio img*/
+                transition: 8s; /*MOVIMENTA ROLA A IMAGE INICIO AO FIM*/
+                border-radius: 40px; /*bordas do box*/
+                cursor: pointer; /*EFEITO MAOZINHA CURSOR*/
+                position: relative; /*para funcionamento efeito hoverlay*/
+
+            }
+
+            div .img-Port:hover{
+
+                background-position: 100% 100%; /*mostra posicao final da imagem*/
+            }
+                /*EFEITO ACIMA DA IMAGEM HOVERLAY */
+            div .hoverlay{
+
+                position: absolute;
+                top: 0; /*delocamento em cima*/
+                left: 0; /*deslocamento a esquerda*/
+                width: 100%; /*largura*/
+                height: 100%; /*altura*/
+                background-color: #0000005a; /*FUNDO ESCURO para TRANSPARENTE*/
+                border-radius: 40px; /*BORDA ARRENDONADA*/
+                display: flex; /**/
+                align-items: center; /*alinhamento texto PROJETO centro horizontalmente*/
+                justify-content: center; /*alinhamento texto */
+                font-size: 24px; /*tamanho da letra*/
+                font-weight: 600; /*fonte pesada*/
+                color: #fff; /*cor texto PROJETO branco*/
+                opacity: 0; /*Sem HOVERLAY fica TRANSPARENTE*/
+                transition: .5s; /*movimento de transparencia lento*/
+
+            }
+
+            div .hoverlay:hover{
+
+                opacity: 1; /*ESCURECE HOVERLAY*/
+
+
+            }
