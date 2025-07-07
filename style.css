@@ -22,7 +22,7 @@ h2.titulo span{
     color: #00ff08; /*cor VERDE*/
 }
 
-button:hover{
+button:hover, form .btn-Enviar input:hover{
 
     box-shadow: 0px 0px 8px #00ff0868; /*sombreado no BOTAO*/
     transform: scale(1.05);
@@ -326,6 +326,66 @@ section.topo-site.flex{
             div .hoverlay:hover{
 
                 opacity: 1; /*ESCURECE HOVERLAY*/
+            }
 
+            section.formulario{
+
+                padding: 80px 4%; /*MARGIM CIMA/BAIXO titulo Formulario e 4% Esquerda/Direita*/
+            }
+
+            form{
+
+                max-width: 500px; /*LARGURA MAXIMA Formulario*/
+                margin: 0 auto; /*centraliza o formulario*/
+                /*display: block;*/
+                display: flex; /*os blocos do formulario ficam lado a lado*/
+                justify-content: center; /*centraliza mais um pouco*/
+                flex-direction: column; /*CRIA uma COLUNA dos blocos*/
+                gap: 10px; /*CRIA um espaço abaixo dos blocos*/
+                margin-top: 40px; /*MARGIN TEXTO fala comigo aumentar*/
 
             }
+
+            form input, form textarea{
+                background-color: #242424; /*ESCURECER a caixa de preenchimento*/
+                border: 0; /*retira a borda do box preenchimento*/
+                outline: 0; /*retira o contorno do box preenchimento*/
+                padding: 20px 15px; /*PREENCHIMENTO INTERNO CIMA/BAIXO e LADO*/
+                border-radius: 15px; /*arrendondar as caixas de texto*/
+                color: #fff; /*Fonte Branca*/
+                font-size: 18px; /*Tamanho da LETRA*/
+            }
+
+            form input::placeholder{
+
+                /*color: #00ff08; /*TEXTO indicativo de preenchimento*/
+            }
+
+            form textarea{
+
+                resize: none; /*tamanho do box mensagem NAO variar tamanho fixo*/
+                max-height: 200px; /*altura maxima 50 pixels*/
+                
+            }
+
+            form .btn-Enviar{
+
+                margin-top: 20px; /*ABAIXAR O botao do formulario*/
+                text-align: center; /*centralizar o botao*/
+            }
+
+            /*form .btn-Enviar input[type=submit] /*utiliza quando quer trabalha somente 1 categoria*/
+
+            form .btn-Enviar input{
+
+                width: 120px; /*largura*/
+                background-color: #00ff08; /*botao enviar VERDE*/
+                color: #000; /*Letra texto botao preto*/
+                font-weight: 700;
+                cursor: pointer; /*PONTEIRO MÃOZINHA*/
+                transition: .2s; /*animação botao enviar*/
+            }
+
+             
+                        
+
