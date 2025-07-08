@@ -254,7 +254,7 @@ section.topo-site.flex{
                 text-align: justify; /*alinhar o texto como um JORNAL*/
             }
 
-            .sobre .txtSobre .btnSocial button{
+            .btnSocial button{
                 width: 60px; /*altura*/
                 height: 60px;/*lagura*/
                 border-radius: 50%; /*raio da borda*/
@@ -385,7 +385,34 @@ section.topo-site.flex{
                 cursor: pointer; /*PONTEIRO MÃOZINHA*/
                 transition: .2s; /*animação botao enviar*/
             }
+            /* ESTILO DO RODAPE*/
+            footer{
 
-             
+                padding: 40px 4%; /*Espaçamento CIMA/BAIXO LATERAL*/
+                box-shadow: 0 0 40px 10px #ffffff1e; /*BOX com deslocamento HORIZONTAL/VERTICAL DESFOQUE ESPALHAMENTO cor BRANCA*/
+            }
+
+            footer .flex{
+
+                justify-content: space-between; /*alinhamento a esquerda LOGOTIPO e EMAIL e a DIREITA AS REDES SOCIAIS*/
+
+            }
+
+            
+            footer .lineFooterBorda{
+                padding: 20px 0;
+                border-top: 2px solid #00ff08;
+
+            }
+            /* TRABALHANDO COM O ICONE CARTA */
+            footer .lineFooter p i{
+                color: #00ff08; /*Simbolo do E-MAIL "icone CARTA"verde*/
+                font-size: 22px; /*tamanho do ICONE CARTA*/
+            }
+             /*TRABALHANDO COM O LINK E-MAIL*/
+            footer .lineFooter p a{
+
+                color: #fff; /*COR link BRANCO*/
+            }
                         
 
